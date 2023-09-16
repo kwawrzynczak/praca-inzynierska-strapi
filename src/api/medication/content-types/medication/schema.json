@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medications",
+  "info": {
+    "singularName": "medication",
+    "pluralName": "medications",
+    "displayName": "Medication",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "meal": {
+      "type": "enumeration",
+      "enum": [
+        "independently",
+        "before",
+        "after"
+      ],
+      "required": true
+    },
+    "time": {
+      "required": true,
+      "type": "time"
+    }
+  }
+}
