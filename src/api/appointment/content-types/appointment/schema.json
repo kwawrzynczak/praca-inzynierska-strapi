@@ -30,6 +30,15 @@
     "datetime": {
       "type": "datetime",
       "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
     }
   }
 }

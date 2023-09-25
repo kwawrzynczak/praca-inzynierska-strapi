@@ -8,6 +8,9 @@ export interface Appointment {
     active: boolean;
     notes?: string;
     datetime: Date;
+    location?: string;
+    street?: string;
+    room?: string;
   };
 }
 export interface Appointment_Plain {
@@ -17,6 +20,9 @@ export interface Appointment_Plain {
   active: boolean;
   notes?: string;
   datetime: Date;
+  location?: string;
+  street?: string;
+  room?: string;
 }
 
 export interface Appointment_NoRelations {
@@ -26,6 +32,9 @@ export interface Appointment_NoRelations {
   active: boolean;
   notes?: string;
   datetime: Date;
+  location?: string;
+  street?: string;
+  room?: string;
 }
 
 export interface Appointment_AdminPanelLifeCycle {
@@ -35,4 +44,7 @@ export interface Appointment_AdminPanelLifeCycle {
   active: boolean;
   notes?: string;
   datetime: Date;
+  location?: string;
+  street?: string;
+  room?: string;
 }
