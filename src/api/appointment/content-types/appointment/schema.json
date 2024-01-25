@@ -20,10 +20,6 @@
       "type": "string",
       "required": true
     },
-    "active": {
-      "type": "boolean",
-      "required": true
-    },
     "notes": {
       "type": "text"
     },
@@ -37,8 +33,11 @@
     "street": {
       "type": "string"
     },
-    "room": {
-      "type": "string"
+    "patient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "appointments"
     }
   }
 }

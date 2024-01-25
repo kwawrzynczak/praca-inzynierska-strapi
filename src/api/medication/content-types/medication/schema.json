@@ -28,6 +28,12 @@
     "time": {
       "required": true,
       "type": "time"
+    },
+    "patient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "medications"
     }
   }
 }
