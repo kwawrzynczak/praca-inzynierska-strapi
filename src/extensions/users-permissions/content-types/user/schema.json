@@ -9,8 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false,
-    "timestamps": true
+    "draftAndPublish": false
   },
   "attributes": {
     "username": {
@@ -77,6 +76,10 @@
       "relation": "oneToMany",
       "target": "api::appointment.appointment",
       "mappedBy": "patient"
+    },
+    "code": {
+      "type": "integer",
+      "unique": true
     }
   }
 }
