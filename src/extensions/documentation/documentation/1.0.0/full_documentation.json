@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-26T07:17:52.374Z"
+    "x-generation-date": "2024-01-28T14:22:54.336Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -689,11 +689,6 @@
                                         "after"
                                       ]
                                     },
-                                    "time": {
-                                      "type": "string",
-                                      "format": "time",
-                                      "example": "12:54.000"
-                                    },
                                     "patient": {
                                       "type": "object",
                                       "properties": {
@@ -710,6 +705,12 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "dosage": {
+                                      "type": "integer"
+                                    },
+                                    "time": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -998,6 +999,7 @@
             "required": [
               "name",
               "meal",
+              "dosage",
               "time"
             ],
             "type": "object",
@@ -1013,11 +1015,6 @@
                   "after"
                 ]
               },
-              "time": {
-                "type": "string",
-                "format": "time",
-                "example": "12:54.000"
-              },
               "patient": {
                 "oneOf": [
                   {
@@ -1028,6 +1025,12 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "dosage": {
+                "type": "integer"
+              },
+              "time": {
+                "type": "string"
               }
             }
           }
@@ -1084,6 +1087,7 @@
         "required": [
           "name",
           "meal",
+          "dosage",
           "time"
         ],
         "properties": {
@@ -1097,11 +1101,6 @@
               "before",
               "after"
             ]
-          },
-          "time": {
-            "type": "string",
-            "format": "time",
-            "example": "12:54.000"
           },
           "patient": {
             "type": "object",
@@ -1585,11 +1584,6 @@
                                         "after"
                                       ]
                                     },
-                                    "time": {
-                                      "type": "string",
-                                      "format": "time",
-                                      "example": "12:54.000"
-                                    },
                                     "patient": {
                                       "type": "object",
                                       "properties": {
@@ -1606,6 +1600,12 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "dosage": {
+                                      "type": "integer"
+                                    },
+                                    "time": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -1813,6 +1813,12 @@
                 }
               }
             }
+          },
+          "dosage": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

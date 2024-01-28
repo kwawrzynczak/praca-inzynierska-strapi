@@ -14,30 +14,34 @@ export interface Medication {
   attributes: {
     createdAt: Date;    updatedAt: Date;    publishedAt?: Date;    name: string;
     meal: Meal;
-    time: Date;
     patient?: { data: User };
+    dosage: number;
+    time: string;
   };
 }
 export interface Medication_Plain {
   id: number;
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
-  time: Date;
   patient?: User_Plain;
+  dosage: number;
+  time: string;
 }
 
 export interface Medication_NoRelations {
   id: number;
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
-  time: Date;
   patient?: number;
+  dosage: number;
+  time: string;
 }
 
 export interface Medication_AdminPanelLifeCycle {
   id: number;
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
-  time: Date;
   patient?: AdminPanelRelationPropertyModification<User_Plain>;
+  dosage: number;
+  time: string;
 }

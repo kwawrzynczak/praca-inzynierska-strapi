@@ -25,15 +25,19 @@
       ],
       "required": true
     },
-    "time": {
-      "required": true,
-      "type": "time"
-    },
     "patient": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "medications"
+    },
+    "dosage": {
+      "type": "integer",
+      "required": true
+    },
+    "time": {
+      "type": "string",
+      "required": true
     }
   }
 }
