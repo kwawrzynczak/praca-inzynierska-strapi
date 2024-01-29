@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-28T14:22:54.336Z"
+    "x-generation-date": "2024-01-29T07:52:00.992Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -686,7 +686,8 @@
                                       "enum": [
                                         "independently",
                                         "before",
-                                        "after"
+                                        "after",
+                                        "with"
                                       ]
                                     },
                                     "patient": {
@@ -706,11 +707,18 @@
                                         }
                                       }
                                     },
-                                    "dosage": {
-                                      "type": "integer"
-                                    },
                                     "time": {
                                       "type": "string"
+                                    },
+                                    "dosage": {
+                                      "type": "string"
+                                    },
+                                    "days": {
+                                      "type": "string"
+                                    },
+                                    "since": {
+                                      "type": "string",
+                                      "format": "date"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -999,7 +1007,6 @@
             "required": [
               "name",
               "meal",
-              "dosage",
               "time"
             ],
             "type": "object",
@@ -1012,7 +1019,8 @@
                 "enum": [
                   "independently",
                   "before",
-                  "after"
+                  "after",
+                  "with"
                 ]
               },
               "patient": {
@@ -1026,11 +1034,18 @@
                 ],
                 "example": "string or id"
               },
-              "dosage": {
-                "type": "integer"
-              },
               "time": {
                 "type": "string"
+              },
+              "dosage": {
+                "type": "string"
+              },
+              "days": {
+                "type": "string"
+              },
+              "since": {
+                "type": "string",
+                "format": "date"
               }
             }
           }
@@ -1087,7 +1102,6 @@
         "required": [
           "name",
           "meal",
-          "dosage",
           "time"
         ],
         "properties": {
@@ -1099,7 +1113,8 @@
             "enum": [
               "independently",
               "before",
-              "after"
+              "after",
+              "with"
             ]
           },
           "patient": {
@@ -1581,7 +1596,8 @@
                                       "enum": [
                                         "independently",
                                         "before",
-                                        "after"
+                                        "after",
+                                        "with"
                                       ]
                                     },
                                     "patient": {
@@ -1601,11 +1617,18 @@
                                         }
                                       }
                                     },
-                                    "dosage": {
-                                      "type": "integer"
-                                    },
                                     "time": {
                                       "type": "string"
+                                    },
+                                    "dosage": {
+                                      "type": "string"
+                                    },
+                                    "days": {
+                                      "type": "string"
+                                    },
+                                    "since": {
+                                      "type": "string",
+                                      "format": "date"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -1814,11 +1837,18 @@
               }
             }
           },
-          "dosage": {
-            "type": "integer"
-          },
           "time": {
             "type": "string"
+          },
+          "dosage": {
+            "type": "string"
+          },
+          "days": {
+            "type": "string"
+          },
+          "since": {
+            "type": "string",
+            "format": "date"
           },
           "createdAt": {
             "type": "string",

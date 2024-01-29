@@ -21,7 +21,8 @@
       "enum": [
         "independently",
         "before",
-        "after"
+        "after",
+        "with"
       ],
       "required": true
     },
@@ -31,13 +32,18 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "medications"
     },
-    "dosage": {
-      "type": "integer",
-      "required": true
-    },
     "time": {
       "type": "string",
       "required": true
+    },
+    "dosage": {
+      "type": "string"
+    },
+    "days": {
+      "type": "string"
+    },
+    "since": {
+      "type": "date"
     }
   }
 }

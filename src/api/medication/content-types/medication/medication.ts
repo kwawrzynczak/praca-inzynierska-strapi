@@ -7,7 +7,8 @@ import { AdminPanelRelationPropertyModification } from '../../../../common/schem
 export enum Meal {
   Independently = 'independently',
   Before = 'before',
-  After = 'after',}
+  After = 'after',
+  With = 'with',}
 
 export interface Medication {
   id: number;
@@ -15,8 +16,10 @@ export interface Medication {
     createdAt: Date;    updatedAt: Date;    publishedAt?: Date;    name: string;
     meal: Meal;
     patient?: { data: User };
-    dosage: number;
     time: string;
+    dosage?: string;
+    days?: string;
+    since?: Date;
   };
 }
 export interface Medication_Plain {
@@ -24,8 +27,10 @@ export interface Medication_Plain {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
   patient?: User_Plain;
-  dosage: number;
   time: string;
+  dosage?: string;
+  days?: string;
+  since?: Date;
 }
 
 export interface Medication_NoRelations {
@@ -33,8 +38,10 @@ export interface Medication_NoRelations {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
   patient?: number;
-  dosage: number;
   time: string;
+  dosage?: string;
+  days?: string;
+  since?: Date;
 }
 
 export interface Medication_AdminPanelLifeCycle {
@@ -42,6 +49,8 @@ export interface Medication_AdminPanelLifeCycle {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  name: string;
   meal: Meal;
   patient?: AdminPanelRelationPropertyModification<User_Plain>;
-  dosage: number;
   time: string;
+  dosage?: string;
+  days?: string;
+  since?: Date;
 }
